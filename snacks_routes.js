@@ -4,7 +4,7 @@ const queries = require('./queries_snacks')
 
 router.route('/')
 
-    .get('/', (req, res) => {
+    .get((req, res) => {
         queries.listAllSnacks().then(snacks => res.status(200).send(snacks))
     })
 
