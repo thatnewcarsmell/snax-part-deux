@@ -14,7 +14,7 @@ router.route('/')
     })
 
     .post((req, res) => {
-        let acceptableKeys = ['first_name', 'last_name', 'email', 'password']
+        let acceptableKeys = ['first_name', 'last_name', 'email', 'hashed_password']
         let valueChecks = Object.values(req.body)
         for (let keys in req.body){
             if (!acceptableKeys.includes(keys)) return next({status: 400, message: 'One or more keys was inaccurate.'})
@@ -22,7 +22,7 @@ router.route('/')
         for (let i = 0; i < valueChecks.length; i++) {
             if (valueChecks[i] === '') return next({status: 400, message: 'One or more keys was inaccurate.'})
         }
-        queries.createUser(req.body).then(user => res.status(201))
+        queries.createUser(req.body).then(user => res.status(201).send(user))
     })
 
 
