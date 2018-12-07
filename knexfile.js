@@ -5,7 +5,7 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      database: 'g102_classmates',
+      database: 'g_snacks',
       user: process.env.DB_USER,
       password: process.env.DB_PASS
     }
