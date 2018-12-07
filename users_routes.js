@@ -5,7 +5,7 @@ const queries = require('./queries_users')
 
 router.route('/')
 
-    .get(':email', async (req, res) => {
+    .get(async (req, res) => {
         let user = await queries.getUserByEmail(req.params.email)
         if (user.email !== req.body.email || user.password !== req.body.password){
             return next({status: 400, message: 'Username or password incorrect.'})
