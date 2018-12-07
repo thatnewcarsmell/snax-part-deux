@@ -12,7 +12,6 @@ const users = require('./users_routes')
 
 app.use(parser.json())
 app.use(cors())
-app.use(router)
 
 app.use('/snacks', snacks)
 

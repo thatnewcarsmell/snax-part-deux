@@ -1,4 +1,4 @@
-const db = require('./database-connection')
+const db = require('./tha_database_connection')
 
 module.exports = {
     listSnacksIds(){

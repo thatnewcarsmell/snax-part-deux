@@ -1,8 +1,8 @@
 
 exports.seed = function(knex, Promise) {
-  return knex('table_name').del()
+  return knex('snacks').del()
     .then(function () {
-      return knex('table_name').insert([
+      return knex('snacks').insert([
         {
           "name":"Pork - Caul Fat",
           "description":"Mauris lacinia sapien quis libero.",
