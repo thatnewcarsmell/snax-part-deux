@@ -10,8 +10,8 @@ module.exports = {
     getSnackById(id){
         return db('snacks').where('id', id).first()
     },
-    createSnack(newKid){
-        return db('snacks').insert(newKid).returning('*')
+    createSnack(newSnack){
+        return db('snacks').insert(newSnack).returning('*')
     },
     editSnack(changedProperty, id){
         return db('snacks').where('id', id).update(changedProperty).returning('*')

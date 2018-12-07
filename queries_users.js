@@ -1,22 +1,22 @@
 const db = require('./tha_database_connection')
 
 module.exports = {
-    listSnacksIds(){
-        return db('snacks').select('id')
+    listUsersIds(){
+        return db('users').select('id')
     },
-    listAllSnacks(){
-        return db('snacks')
+    listAllUsers(){
+        return db('users')
     },
-    getSnackById(id){
-        return db('snacks').where('id', id).first()
+    getUserById(id){
+        return db('users').where('id', id).first()
     },
-    createSnack(newKid){
-        return db('snacks').insert(newKid).returning('*')
+    createUser(newUser){
+        return db('users').insert(newUser).returning('*')
     },
-    editSnack(changedProperty, id){
-        return db('snacks').where('id', id).update(changedProperty).returning('*')
+    editUser(changedProperty, id){
+        return db('users').where('id', id).update(changedProperty).returning('*')
     },
-    deleteSnack(id){
-        return db('snacks').where('id', id).del().returning('*')
+    deleteUser(id){
+        return db('users').where('id', id).del().returning('*')
     }
 }
