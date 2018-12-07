@@ -6,9 +6,9 @@ const queries = require('./queries')
 const port = process.env.PORT || 3000
 
 const router = express.Router()
-const snacks = require('./snacks')
-const reviews = require('./reviews')
-const users = require('./users')
+const snacks = require('./snacks_routes')
+const reviews = require('./reviews_routes')
+const users = require('./users_routes')
 
 app.use(parser.json())
 app.use(cors())
