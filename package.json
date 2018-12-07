@@ -2,8 +2,10 @@
   "name": "snax-part-deux-back-end",
   "version": "1.0.0",
   "description": "![logo](./snacks_logo.png)",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
