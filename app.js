@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const parser = require('body-parser')
 const cors = require('cors')
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8080
 
 const router = express.Router()
 const snacks = require('./snacks_routes')
