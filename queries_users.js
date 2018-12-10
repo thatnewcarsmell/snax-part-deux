@@ -1,9 +1,6 @@
 const db = require('./tha_database_connection')
 
 module.exports = {
-  listUsersIds(){
-    return db('users').select('id')
-  },
   listAllUsers(){
     return db('users')
   },
