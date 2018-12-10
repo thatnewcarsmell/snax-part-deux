@@ -1,4 +1,3 @@
-
 exports.seed = function(knex, Promise) {
   return knex('snacks').del()
     .then(function () {
@@ -211,7 +210,8 @@ exports.seed = function(knex, Promise) {
           "description":"Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
           "is_perishable":false,
           "price":"17.18",
-          "img":"https://images.unsplash.com/photo-1447099688328-2488c8c9648a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&s=5aa1ed12aede64ce99e936b337476099"}]
-);
+          "img":"https://images.unsplash.com/photo-1447099688328-2488c8c9648a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&s=5aa1ed12aede64ce99e936b337476099"
+        }
+      ]);
     });
 };
