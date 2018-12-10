@@ -6,6 +6,7 @@ module.exports = {
   },
   listAllSnacks(){
     return db('snacks')
+    // .join('reviews', 'snacks.id', '=', 'reviews.snack_id').select('*')
   },
   getSnackById(id){
     return db('snacks').where('id', id).first()
